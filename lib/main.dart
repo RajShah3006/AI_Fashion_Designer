@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,13 +29,34 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 209, 164)),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+
+      home: const MyHomePage(title: 'dinu binu has gyno'),
     );
   }
+  
 }
 
+class SecondPage extends StatelessWidget {
+ const SecondPage({super.key});
+
+  // This widget is the home page of your application. It is stateless, meaning
+  // that it does not require mutable state.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the StatelessWidget. Fields in a Widget subclass are
+  // always marked "final".
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Second Page")),
+      body: const Center(child: Text("Welcome to the second page!")),
+    );
+  }
+  }
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -64,6 +86,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+    });
+  }
+  void _decreaseCounter() {
+    setState(() {
+      _counter--;
     });
   }
 
@@ -112,11 +139,34 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: _decreaseCounter,
+            tooltip: 'Decrease',
+            child: const Icon(Icons.remove),
+          ),
+          const SizedBox(height: 6), // Add some space between the buttons
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+          ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SecondPage()),
+    );
+  },
+  child: const Text("Go to Second Page"),
+),
+          
+        ],
+      ),
+
+       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
