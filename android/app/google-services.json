@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "379461892589",
+    "project_id": "ai-designer-db0b8",
+    "storage_bucket": "ai-designer-db0b8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379461892589:android:59ac0c9a92c39816034fe4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379461892589-v6lsk8i8hhem4uib347folf3rglquti7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhkq58D7C_b6ti6y67Viqdm5EeZf3cDeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379461892589-v6lsk8i8hhem4uib347folf3rglquti7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "379461892589-ooti6tip89k861gg29r4d22fo81jq31g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
