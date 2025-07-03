@@ -10,23 +10,20 @@ environment:
   sdk: '>=3.0.0 <4.0.0' # Broad Dart 3.x compatibility
 
 dependencies:
+  cupertino_icons: ^1.0.8
+  firebase_auth: ^4.20.0
+  firebase_core: ^2.24.2
   flutter:
     sdk: flutter
-
-  # Adjusted versions based on pub's suggestion and web compatibility
-  firebase_core: ^2.24.2   # Keeping this version
-  firebase_auth: ^4.20.0   # Downgraded to be compatible with firebase_core ^2.24.2
-  google_sign_in: ^6.1.6   # Keeping this version
-
-  cupertino_icons: ^1.0.8
+  google_sign_in: ^6.1.6
+  ndk: ^0.4.0
 
 # Removed dependency_overrides as the direct version fix should resolve it.
 # If you still get PromiseJsImpl errors AFTER this, we might revisit overrides.
-
 dev_dependencies:
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
